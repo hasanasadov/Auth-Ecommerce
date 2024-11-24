@@ -36,9 +36,6 @@ const validateProduct = checkSchema({
     },
   },
   image: {
-    required: {
-      errorMessage: "Image is required.",
-    },
     custom: {
       options: (value, { req }) => {
         if (req.file && !req.file.mimetype.startsWith("image/")) {

@@ -51,7 +51,9 @@ app.use("/auth", authRouter);
 app.use("/reservations", reservationRouter);
 app.use("/users", authorize({ isAdmin: true }), usersRouter);
 
-const PORT = process.env.PORT || 3000;
+const PORT = 3333;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+export default app;
